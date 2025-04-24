@@ -8,6 +8,12 @@ function loadAllPies() {
   fetch('/api/pies')
   .then(response => response.json())
   .then(data => {
+    
+    console.groupCollapsed('pie data' );
+    console.dir(data);
+    console.table(data);
+    console.group();
+
     let string_data = JSON.stringify(data);
 
     let pieMarkup = '';
